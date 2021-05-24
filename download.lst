@@ -19,5 +19,20 @@ https://www.x.org/archive/individual/proto/dri3proto-1.0.tar.gz
 [libxshmfence]
 https://www.x.org/releases/individual/lib/libxshmfence-1.1.tar.gz
 
+[libelf]
+http://repository.timesys.com/buildsources/l/libelf/libelf-0.8.12/libelf-0.8.12.tar.gz
+
+[libxcb]
+https://www.x.org/releases/individual/lib/libxcb-1.14.tar.gz
+
 [libxkbcommon]
 git clone https://github.com/xkbcommon/libxkbcommon
+
+[wayland]
+https://wayland.freedesktop.org/releases/wayland-1.19.0.tar.xz
+
+[wayland-proto]
+https://wayland.freedesktop.org/releases/wayland-protocols-1.19.tar.xz
+
+[libxml2]
+http://xmlsoft.org/sources/libxml2-2.9.9-rc2.tar.gz
