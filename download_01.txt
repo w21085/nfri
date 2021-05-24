@@ -1,3 +1,6 @@
+[expat]
+https://github.com/w21085/nfri/blob/main/expat-2.2.10.tar.gz
+
 [libinput]
 https://www.freedesktop.org/software/libinput/libinput-1.15.6.tar.xz
 
