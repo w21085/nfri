@@ -1,1 +1,5 @@
+[libinput]
+https://www.freedesktop.org/software/libinput/libinput-1.15.6.tar.xz
 
+[weston]
+https://wayland.freedesktop.org/releases/weston-9.0.0.tar.xz
