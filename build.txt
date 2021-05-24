@@ -1,7 +1,23 @@
-[meson]
+[meson] install
+pip install meson
+pip install --user meson (current user only)
 
+[ninja] install
+pip install ninja
+pip install --user ninja (current user only)
 
+[pip from local repo]
+pip install --no-index --find-links=file:///local/dir/ SomePackage
+pip install --no-index --find-links=/local/dir/ SomePackage
+pip install --no-index --find-links=relative/dir/ SomePackage
+예)
+pip install --no-index --find-links=pefile-2018.8.8.tar.gz pefile
 
+[build using meson]
+meson setup <source directory> <build directory>
+=> 
+cd <source root>
+meson setup builddir
 
 [libxkbcommon]
 meson setup build
@@ -13,3 +29,4 @@ meson setup build \
     -Dxkb-config-root=/usr/share/X11/xkb \
     -Dx-locale-root=/usr/share/X11/locale
 ninja -C build
+
