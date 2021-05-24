@@ -5,6 +5,14 @@ pip install --user meson (current user only)
 [ninja] install
 pip install ninja
 pip install --user ninja (current user only)
+or
+self build with Python
+./configure.py --bootstrap
+or
+self build with CMake
+cmake -Bbuild-cmake -H.
+cmake --build build-cmake
+
 
 [pip from local repo]
 pip install --no-index --find-links=file:///local/dir/ SomePackage
