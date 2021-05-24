@@ -1,1 +1,23 @@
+[meson] 
+https://github.com/mesonbuild/meson/releases/download/0.58.0/meson-0.58.0.tar.gz
 
+[ninja]
+https://github.com/ninja-build/ninja/releases/download/v1.10.2/ninja-linux.zip
+
+[libdrm]
+https://github.com/freedesktop/mesa-drm/archive/refs/tags/libdrm-2.4.105.tar.gz
+
+[glproto]
+https://www.x.org/archive/individual/proto/glproto-1.4.17.tar.gz
+
+[dri2proto]
+https://www.x.org/archive/individual/proto/dri2proto-2.8.tar.gz
+
+[dri3proto]
+https://www.x.org/archive/individual/proto/dri3proto-1.0.tar.gz
+
+[libxshmfence]
+https://www.x.org/releases/individual/lib/libxshmfence-1.1.tar.gz
+
+[libxkbcommon]
+git clone https://github.com/xkbcommon/libxkbcommon
