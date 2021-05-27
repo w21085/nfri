@@ -27,6 +27,10 @@ meson setup <source directory> <build directory>
 cd <source root>
 meson setup builddir
 
+[libdrm]
+meson ./build_libdrm -Dprefix=/path/to/install -Ddefault_library=both
+ninja -C ./build_libdrm install
+
 [libxkbcommon]
 meson setup build
 ninja -C build
