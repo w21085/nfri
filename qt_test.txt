@@ -1,0 +1,28 @@
+1. create sample.cpp file
+----------------------------
+#include <QApplication>
+#include <QWidget>
+
+int main (int argc, char *argv[])
+{
+  QApplication app(argc, argv);
+  QWidget window;
+  
+  window.resize(250, 150);
+  window.setWindowTitle("Sample Test");
+  window.show();
+  
+  return app.exec();
+}
+----------------------------
+
+2. create sample.pro file
+  qmake -project
+
+3. add "QT += widgets" to sample.pro file
+
+4. create Makefile 
+  qmake
+
+5. create executable 
+  make
