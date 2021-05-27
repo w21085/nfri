@@ -1,0 +1,63 @@
+remove xkbcommon in qt webengine-xkbcommon
+
+diff --git a/src/buildtools/config/linux.pri b/src/buildtools/config/linux.pri
+index c02af3909..455a2e3c6 100644
+--- a/src/buildtools/config/linux.pri
++++ b/src/buildtools/config/linux.pri
+@@ -192,15 +192,11 @@ host_build {
+     } else {
+         gn_args += use_alsa=false
+     }
+-    qtConfig(build-qtwebengine-core):qtConfig(webengine-system-xkbcommon) {
+-        gn_args += use_xkbcommon=true
+-    } else {
+-        gn_args += use_xkbcommon=false
+-    }
+     !packagesExist(libpci): gn_args += use_libpci=false
+ 
+     qtConfig(build-qtwebengine-core):qtConfig(webengine-ozone-x11) {
+         gn_args += ozone_platform_x11=true
++        gn_args += use_xkbcommon=true
+         packagesExist(xscrnsaver): gn_args += use_xscrnsaver=true
+         qtConfig(webengine-webrtc): gn_args += rtc_use_x11=true
+     }
+diff --git a/src/buildtools/configure.json b/src/buildtools/configure.json
+index a80ef32eb..ec0ca5c5d 100644
+--- a/src/buildtools/configure.json
++++ b/src/buildtools/configure.json
+@@ -32,13 +32,6 @@
+                 { "type": "pkgConfig", "args": "libdrm" }
+             ]
+         },
+-        "webengine-xkbcommon": {
+-            "label": "xkbcommon",
+-            "headers": "xkbcommon/xkbcommon.h",
+-            "sources": [
+-                "-lxkbcommon"
+-            ]
+-        },
+         "webengine-xcomposite": {
+             "label": "xcomposite",
+             "sources": [
+@@ -447,11 +440,6 @@
+             "condition": "libs.webengine-libdrm",
+             "output": [ "privateFeature" ]
+         },
+-        "webengine-system-xkbcommon": {
+-            "label": "xkbcommon",
+-            "condition": "libs.webengine-xkbcommon",
+-            "output": [ "privateFeature" ]
+-        },
+         "webengine-system-xcomposite": {
+             "label": "xcomposite",
+             "condition": "libs.webengine-xcomposite",
+@@ -746,8 +734,7 @@
+                         "webengine-system-png",
+                         "webengine-system-jpeg",
+                         "webengine-system-harfbuzz",
+-                        "webengine-system-freetype",
+-                        "webengine-system-xkbcommon"
++                        "webengine-system-freetype"
+                      ]
+                  }
+              ]
