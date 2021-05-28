@@ -1,2 +1,7 @@
 [X11 - X.org]
+http://git.freedesktop.org
+
+<git info>
+git://git.freedesktop.org/git/xorg/lib/libX11
+https://github.com/freedesktop/xorg-lib-libX11
 https://gitlab.freedesktop.org/xorg/lib/libx11/-/tree/master
