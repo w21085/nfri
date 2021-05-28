@@ -36,3 +36,12 @@ https://wayland.freedesktop.org/releases/wayland-protocols-1.19.tar.xz
 
 [libxml2]
 http://xmlsoft.org/sources/libxml2-2.9.9-rc2.tar.gz
+
+[expat]
+https://github.com/w21085/nfri/blob/main/expat-2.2.10.tar.gz
+
+[libinput]
+https://www.freedesktop.org/software/libinput/libinput-1.15.6.tar.xz
+
+[weston]
+https://wayland.freedesktop.org/releases/weston-9.0.0.tar.xz
