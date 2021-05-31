@@ -19,3 +19,7 @@
 [X.org - pciaccess] https://www.x.org/releases/individual/lib/libpciaccess-0.16.tar.gz
 [X.org - Xtrans]    https://www.x.org/releases/individual/lib/xtrans-1.4.0.tar.gz
 [X.org - Xxf86vm]   https://www.x.org/releases/individual/lib/libXxf86vm-1.1.4.tar.gz
+
+[X.org - FS]        https://www.x.org/releases/individual/lib/libFS-1.0.8.tar.gz
+[X.org - ICE]       https://www.x.org/releases/individual/lib/libICE-1.0.10.tar.gz
+[X.org - SM]        https://www.x.org/releases/individual/lib/libSM-1.2.3.tar.gz
