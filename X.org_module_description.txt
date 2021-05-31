@@ -1,0 +1,161 @@
+[Core X11 runtime]
+lib/FS - X Font Service client library
+lib/ICE - Inter-Client Exchange library
+lib/SM - Session Management library
+lib/X11 - X11 Client library
+lib/Xau - X Authorization routines
+lib/Xcomposite - Composite extension
+lib/Xdamage - Damage extension
+lib/Xdmcp - X Display Manager Control Protocol routines
+lib/Xext - common X Extensions library
+lib/Xfixes - X-Fixes extension
+lib/Xfont - X font handling library for server & utilities
+lib/Xfontcache - X-TrueType font cache extension client library
+lib/Xft - Client side font rendering library
+lib/Xi - X Input Extension library
+lib/Xinerama - Xinerama protocol library
+lib/Xmu - X miscellaneous utility routines
+lib/Xpm - XPM format pixmap library
+lib/Xrandr - Xrandr extension library
+lib/Xrender - RENDER extension library
+lib/Xv - Xvideo extension library
+lib/Xxf86misc - XFree86-MISC extension library
+lib/Xxf86vm - XFree86-VidMode extension library
+lib/fontenc - font encoding library
+lib/lbxutil - LBX utility routines
+lib/xkbfile - XKB file handling routines
+xserver/xorg - X servers (including Xorg, Xprt, Xvfb, Xnest, & Xdmx)
+
+app/iceauth - ICE authority file utility
+app/rgb - X colorname -> RGB mapping database
+app/sessreg - Register X sessions in system utmp/utmpx databases
+app/setxkbmap - set the keyboard using the X Keyboard Extension
+app/smproxy - Session Manager Proxy
+app/xauth - X authority file utility
+app/xdpyinfo - display information utility for X
+app/xev - print contents of X events
+app/xhost - server access control program for X
+app/xinit - X Window System initializer (includes startx)
+app/xkbcomp - compile XKB keyboard description
+app/xkill - kill a client by its X resource
+app/xlsatoms - list interned atoms defined on server
+app/xlsclients - list client applications running on a display
+app/xlsfonts - list X fonts available on X server
+app/xmodmap - utility for modifying keymaps and button mappings
+app/xprop - property displayer for X
+app/xrandr - primitive command line interface to RandR extension
+app/xrdb - X server resource database utility
+app/xrefresh - refresh all or part of an X screen
+app/xset - user preference utility for X
+app/xsetmode - set the mode for an X Input device
+app/xsetpointer - set an X Input device as the main pointer
+app/xsm - X Session Manager
+app/xvinfo - Print out X-Video extension adaptor information
+app/xwininfo - window information utility for X
+data/bitmaps - standard set of X bitmaps
+data/cursors - standard set of X cursors
+
+Platform specific:
+lib/AppleWM - (MacOS)
+lib/WindowsWM - (Win32)
+app/xdriinfo - query configuration information of DRI drivers (DRI-supporting platforms)
+
+[Core X11 build/development/install]
+lib/xtrans - X Network Transport layer shared code
+proto/BigReqs
+proto/Composite - Composite extension header files
+proto/Damage - Damage extension header files
+proto/Fixes - X-Fixes extension header files
+proto/Fontcache - font cache header files
+proto/Fonts - font library header files
+proto/GL - GL/GLX (3D) header files
+proto/Input - Xinput header files
+proto/KB - XKB (keyboard) extension header files
+proto/PM - X Proxy Management header files
+proto/Xinerama
+proto/Randr
+proto/Render
+proto/Resource
+proto/ScrnSaver - X ScreenSaver extension header files
+proto/Video
+proto/X11
+proto/XCMisc
+proto/XExt
+proto/XF86Misc
+proto/XF86VidMode
+util/macros - autoconf macros used in X modular configure.ac files
+
+app/bdftopcf - convert X font from Bitmap Distribution Format to Portable Compiled Format
+app/mkcfm - create summaries of CID font metric files
+app/mkfontdir - create an index of X font files in a directory
+app/mkfontscale - create an index of scalable font files for X
+app/xcursorgen - create an X cursor file from PNG images
+doc/xorg-sgml-doctools - document format conversion tools for SGML docs
+
+Platform specific:
+proto/AppleWM - (MacOS)
+proto/WindowsWM - (Win32)
+proto/XF86DRI - (DRI-supporting platforms)
+
+[Extended X11 platform]
+lib/XRes - X Resource extension
+lib/XScrnSaver - MIT-SCREEN-SAVER extension
+lib/Xcursor
+lib/Xtst
+lib/XvMC
+lib/Xxf86dga
+lib/dmx
+proto/DMX
+proto/Record
+proto/XF86BigFont
+proto/XF86DGA
+
+app/bitmap - XBM format bitmap editor and converter utilities
+app/scripts (xauth_switch_to_sun-des-1) - Secure RPC (SUN-DES-1) helper script
+app/xcmsdb - Device Color Characterization utility for X Color Management System
+app/xfd - display all the characters in an X font
+app/xfontsel - point and click selection of X11 font names
+app/xgamma - Alter a monitor's gamma correction through the X server
+app/xkbprint - print an XKB keyboard description
+app/xload - system load average display for X
+app/xmag - magnify parts of the screen
+app/xpr - print an X window dump from xwd
+app/xrx - "Broadway"
+app/xvidtune - video mode tuner for Xorg
+app/xwd - dump current contents of X window or screen to file
+app/xwud - display an X window dump from xwd
+
+X Font Server & related tools:
+app/fslsfonts - list fonts served by X font server
+app/fstobdf - generate BDF font from X font server
+app/showfont - show information about X font from font server
+app/xfs - X Font Server
+app/xfsinfo - X font server information utility
+Platform specific:
+app/constype - print type of console (SPARC & Sun/3 platforms, plus Solaris x86)
+
+[Legacy X11 platform]
+app/luit - Convert terminal i/o from legacy encodings to UTF-8
+app/oclock - round X clock
+app/twm - simple window manager
+app/xbiff - watch mailboxes for new message delivery
+app/xcalc - scientific calculator for X
+app/xclipboard - X clipboard manager
+app/xclock - X clock
+app/xconsole - monitor system console messages with X
+app/xditview - display ditroff output
+app/xdm - X Display Manager / XDMCP server
+app/xedit - simple text editor for X
+app/xman - Unix manual page viewer
+app/xmessage - display a message or query in a window
+app/xmore - plain text display program for the X Window System
+app/xsetroot - root window parameter setting utility for X
+app/xstdcmap - X standard colormap utility
+lib/Xaw - Athena Widgets toolkit
+
+Xt Toolkit Intrinsics and related software:
+app/appres - list X application resource database
+app/editres - dynamic resource editor for X Toolkit applications
+app/listres - list resources in widgets
+app/viewres - graphical class/resource browser for Xt
+lib/Xt - X Toolkit Intrinsics library
