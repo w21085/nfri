@@ -12,6 +12,7 @@
 [X.org - Xmu] https://www.x.org/releases/individual/lib/libXmu-1.1.3.tar.gz
 [X.org - Xrender] https://www.x.org/releases/individual/lib/libXrender-0.9.10.tar.gz
 [X.org - Xt] https://www.x.org/releases/individual/lib/libXt-1.2.0.tar.gz
+[X.org - Xtst] https://www.x.org/releases/individual/lib/libXtst-1.2.3.tar.gz
 [X.org - Xkbfile] https://www.x.org/releases/individual/lib/libxkbfile-1.1.0.tar.gz
 [X.org - pciaccess] https://www.x.org/releases/individual/lib/libpciaccess-0.16.tar.gz
 [X.org - Xtrans] https://www.x.org/releases/individual/lib/xtrans-1.4.0.tar.gz
