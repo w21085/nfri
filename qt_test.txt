@@ -1,3 +1,15 @@
+qt.qpa.xcb: coudl not connect to display
+qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found
+
+=> Unless you have an ssh config that sets some parameters when you connect to that remote, you are at least missing the -X parameter. X11 forwarding is not on by default.
+
+killall Xorg (no need when run Xorg for the first time)
+
+export DISPLAY=:0.0
+
+/usr/bin/Xorg -depth 16&
+
+
 1. create sample.cpp file
 ----------------------------
 #include <QApplication>
