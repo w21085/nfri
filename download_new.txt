@@ -23,3 +23,9 @@
 [X.org - FS]        https://www.x.org/releases/individual/lib/libFS-1.0.8.tar.gz
 [X.org - ICE]       https://www.x.org/releases/individual/lib/libICE-1.0.10.tar.gz
 [X.org - SM]        https://www.x.org/releases/individual/lib/libSM-1.2.3.tar.gz
+
+
+https://www.x.org/releases/individual/lib/libXdmcp-1.1.3.tar.gz
+https://www.x.org/releases/individual/lib/libXfixes-5.0.3.tar.gz
+https://www.x.org/releases/individual/lib/libXp-1.0.3.tar.gz
+https://www.x.org/releases/individual/lib/libXpm-3.5.12.tar.gz
