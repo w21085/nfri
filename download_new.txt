@@ -32,3 +32,6 @@ https://www.x.org/releases/individual/lib/libXpm-3.5.12.tar.gz
 
 [QT]
 https://download.qt.io/archive/qt/5.12/5.12.0/single/qt-everywhere-src-5.12.0.tar.xz
+
+[
+https://github.com/llvm/llvm-project/releases/download/llvmorg-12.0.0/clang-12.0.0.src.tar.xz
