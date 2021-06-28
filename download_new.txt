@@ -35,3 +35,13 @@ https://download.qt.io/archive/qt/5.12/5.12.0/single/qt-everywhere-src-5.12.0.ta
 
 [
 https://github.com/llvm/llvm-project/releases/download/llvmorg-12.0.0/clang-12.0.0.src.tar.xz
+export LLVM_BASE_DIR=/home/jemin/development/llvm/ 
+export LLVM_DIR=${LLVM_BASE_DIR} 
+export LLVM_SRC=${LLVM_BASE_DIR}/llvm 
+export LLVM_SRC_ROOT=${LLVM_BASE_DIR}/llvm 
+export LLVM_ROOT=${LLVM_BASE_DIR}/llvm 
+export LLVM_OBJ=${LLVM_BASE_DIR}/llvm-objects 
+export LLVM_OBJ_DIR=${LLVM_BASE_DIR}/llvm-objects 
+export LLVM_OBJ_ROOT=${LLVM_BASE_DIR}/llvm-objects 
+export LLVM_INSTALL_DIR=${LLVM_BASE_DIR}/llvm-install 
+export PATH=$LLVM_INSTALL_DIR/bin:$PATH
