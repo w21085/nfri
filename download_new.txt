@@ -34,6 +34,8 @@ https://www.x.org/releases/individual/lib/libXpm-3.5.12.tar.gz
 https://download.qt.io/archive/qt/5.12/5.12.0/single/qt-everywhere-src-5.12.0.tar.xz
 
 [
+https://github.com/llvm/llvm-project/releases/download/llvmorg-11.0.1/clang-11.0.1.src.tar.xz
+
 https://github.com/llvm/llvm-project/releases/download/llvmorg-12.0.0/clang-12.0.0.src.tar.xz
 export LLVM_BASE_DIR=/home/jemin/development/llvm/ 
 export LLVM_DIR=${LLVM_BASE_DIR} 
