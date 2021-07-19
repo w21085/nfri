@@ -1,3 +1,52 @@
+[paraview] super-build
+$ git clone --recursive https://gitlab.kitware.com/paraview/paraview-superbuild.git
+
+$ cd paraview-superbuild
+
+# ensure you have the latest state from the main repo
+$ git fetch origin 
+
+# replace `v5.7.0` with tag name of your choice
+$ git checkout v5.7.0 
+$ git submodule update
+
+-------------
+Projects and Features
+The superbuild contains multiple projects which may be used to enable
+different features within the resulting ParaView build. Most projects involve
+downloading and adding the feature to the resulting package, but there are a
+few which are used just to enable features within ParaView itself.
+The paraview project must be enabled to build ParaView.
+The paraviewsdk project enables the building of a package which includes
+headers and libraries suitable for developing against ParaView. It is only available
+on Linux (at the moment).
+The paraviewweb project adds web services into the resulting package.
+The paraviewgettingstartedguide, and paraviewtutorialdata packages add
+startup documentation and example data to the package.
+ParaView supports multiple rendering engines including egl, mesa,
+osmesa, and qt5. All of these are incompatible with each other. If none of
+these are chosen, a UI-less ParaView will be built (basically just
+pvpython). On Windows and macOS, only the qt5 rendering engine is
+available.
+The python package is available to enable Python support in the package. In
+addition, the matplotlib and numpy packages are available.
+The following packages enable other features within ParaView:
+
+adios: Enable readers and writers for visualization data in the ADIOS file format.
+las: Enable reading the LAS file format
+cosmotools: Enables Cosmo file format readers and related filters and algorithms.
+ffmpeg: Video encoding library for macOS and Linux.
+ospray: A ray tracing rendering backend from Intel.
+silo: Support reading the silo file format.
+tbb: Improved parallel processing support within various VTK and ParaView filters and algorithms.
+visitbridge: Enables readers for file formats provided from the VisIt project.
+vortexfinder2: A collection of tools to visualize and analyze vortices.
+vrpn: Virtual reality support through the VRPN interface.
+vtkm: VTK-m Accelerator Filters
+xdmf3: A meta file format built on top of HDF5.
+--------------------
+
+
 [meson] install
 pip install meson
 pip install --user meson (current user only)
