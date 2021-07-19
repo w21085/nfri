@@ -1,361 +1,176 @@
 WARNING: Application calling GLX 1.3 function "glXCreatePbuffer" when GLX 1.3 is not supported!  This is an application bug!
-
 (   2.981s) [paraview        ]vtkOpenGLRenderWindow.c:471    ERR| vtkGenericOpenGLRenderWindow (0x3631390): Unable to find a valid OpenGL 3.2 or later implementation. Please update your video card driver to the latest version. If you are using Mesa please make sure you have version 11.2 or later and make sure your driver in Mesa supports OpenGL 3.2 such as llvmpipe or openswr. If you are on windows and using Microsoft remote desktop note that it only supports OpenGL 3.2 with nvidia quadro cards. You can use other remoting software such as nomachine to avoid this issue.
-
 (   2.984s) [paraview        ]vtkOpenGLRenderWindow.c:471    ERR| vtkGenericOpenGLRenderWindow (0x3631390): Unable to find a valid OpenGL 3.2 or later implementation. Please update your video card driver to the latest version. If you are using Mesa please make sure you have version 11.2 or later and make sure your driver in Mesa supports OpenGL 3.2 such as llvmpipe or openswr. If you are on windows and using Microsoft remote desktop note that it only supports OpenGL 3.2 with nvidia quadro cards. You can use other remoting software such as nomachine to avoid this issue.
-
 (   3.003s) [paraview        ]   vtkShaderProgram.cxx:437    ERR| vtkShaderProgram (0x4af7ce0): 1: #version 150
 
 2: #ifndef GL_ES
-
 3: #define highp
-
 4: #define mediump
-
 5: #define lowp
-
 6: #endif // GL_ES
-
 7: #define attribute in
-
 8: #define varying out
-
 9:
-
 10:
-
 11: /*=========================================================================
-
 12:
-
 13:   Program:   Visualization Toolkit
-
 14:   Module:    vtkPolyDataVS.glsl
-
 15:
-
 16:   Copyright (c) Ken Martin, Will Schroeder, Bill Lorensen
-
 17:   All rights reserved.
-
 18:   See Copyright.txt or http://www.kitware.com/Copyright.htm for details.
-
 19:
-
 20:      This software is distributed WITHOUT ANY WARRANTY; without even
-
 21:      the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
-
 22:      PURPOSE.  See the above copyright notice for more information.
-
 23:
-
 24: =========================================================================*/
-
 25:
-
 26: in vec4 vertexMC;
-
 27:
-
 28:
-
 29:
-
 30: // frag position in VC
-
 31: //VTK::PositionVC::Dec
-
 32:
-
 33: // optional normal declaration
-
 34: //VTK::Normal::Dec
-
 35:
-
 36: // extra lighting parameters
-
 37: //VTK::Light::Dec
-
 38:
-
 39: // Texture coordinates
-
 40: //VTK::TCoord::Dec
-
 41:
-
 42: // material property values
-
 43: //VTK::Color::Dec
-
 44:
-
 45: // clipping plane vars
-
 46: //VTK::Clip::Dec
-
 47:
-
 48: // camera and actor matrix values
-
 49: uniform mat4 MCDCMatrix;
-
 50:
-
 51: // Apple Bug
-
 52: //VTK::PrimID::Dec
-
 53:
-
 54: // Value raster
-
 55: //VTK::ValuePass::Dec
-
 56:
-
 57: // picking support
-
 58: //VTK::Picking::Dec
-
 59:
-
 60: void main()
-
 61: {
-
 62:   //VTK::CustomBegin::Impl
-
 63:
-
 64:   //VTK::Color::Impl
-
 65:
-
 66:   //VTK::Normal::Impl
-
 67:
-
 68:   //VTK::TCoord::Impl
-
 69:
-
 70:   //VTK::Clip::Impl
-
 71:
-
 72:   //VTK::PrimID::Impl
-
 73:
-
 74:     gl_Position = MCDCMatrix * vertexMC;
-
 75:
-
 76:
-
 77:   //VTK::ValuePass::Impl
-
 78:
-
 79:   //VTK::Light::Impl
-
 80:
-
 81:   //VTK::Picking::Impl
-
 82:
-
 83:   //VTK::CustomEnd::Impl
-
 84: }
-
- 
 
 (   3.003s) [paraview        ]   vtkShaderProgram.cxx:438    ERR| vtkShaderProgram (0x4af7ce0): 0:1(10): error: GLSL 1.50 is not supported. Supported versions are: 1.10, 1.20, 1.30, 1.00 ES, and 3.00 ES
 
- 
-
- 
-
 Loguru caught a signal: SIGSEGV
-
 Stack trace:
-
 79            0x40816a paraview() [0x40816a]
-
 78      0x7f6ea2a44f8a __libc_start_main + 234
-
 77            0x407e87 paraview() [0x407e87]
-
 76            0x40d8c3 paraview() [0x40d8c3]
-
 75      0x7f6ea1ecfd0b QWidget::setVisible(bool) + 443
-
 74      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 73      0x7f6ea1eccd00 QWidgetPrivate::showChildren(bool) + 272
-
 72      0x7f6ea1ecfd0b QWidget::setVisible(bool) + 443
-
 71      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 70      0x7f6ea1eccd00 QWidgetPrivate::showChildren(bool) + 272
-
 69      0x7f6ea1ecfd0b QWidget::setVisible(bool) + 443
-
 68      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 67      0x7f6ea1eccd00 QWidgetPrivate::showChildren(bool) + 272
-
 66      0x7f6ea1ecfd0b QWidget::setVisible(bool) + 443
-
 65      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 64      0x7f6ea1eccd00 QWidgetPrivate::showChildren(bool) + 272
-
 63      0x7f6ea1ecfd0b QWidget::setVisible(bool) + 443
-
 62      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 61      0x7f6ea1ecccea QWidgetPrivate::showChildren(bool) + 250
-
 60      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 59      0x7f6ea1eccd00 QWidgetPrivate::showChildren(bool) + 272
-
 58      0x7f6ea1ecfd0b QWidget::setVisible(bool) + 443
-
 57      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 56      0x7f6ea1ecccea QWidgetPrivate::showChildren(bool) + 250
-
 55      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 54      0x7f6ea1eccd00 QWidgetPrivate::showChildren(bool) + 272
-
 53      0x7f6ea1ecfd0b QWidget::setVisible(bool) + 443
-
 52      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 51      0x7f6ea1eccd00 QWidgetPrivate::showChildren(bool) + 272
-
 50      0x7f6ea1ecfd0b QWidget::setVisible(bool) + 443
-
 49      0x7f6ea1eccd4f QWidgetPrivate::show_helper() + 63
-
 48      0x7f6ea1eccd00 QWidgetPrivate::showChildren(bool) + 272
-
 47      0x7f6ea1ecfd0b QWidget::setVisible(bool) + 443
-
 46      0x7f6ea1eccd33 QWidgetPrivate::show_helper() + 35
-
 45      0x7f6ea1ec9156 QWidgetPrivate::sendPendingMoveAndResizeEvents(bool, bool) + 294
-
 44      0x7f6ea0446149 QCoreApplication::notifyInternal2(QObject*, QEvent*) + 377
-
 43      0x7f6ea1e9a3e0 QApplication::notify(QObject*, QEvent*) + 512
-
 42      0x7f6ea1e93461 QApplicationPrivate::notify_helper(QObject*, QEvent*) + 129
-
 41      0x7f6ea1ed09de QWidget::event(QEvent*) + 2670
-
 40      0x7f6ea1eeff5a QOpenGLWidget::resizeEvent(QResizeEvent*) + 154
-
 39      0x7f6ea1ec9215 QWidgetPrivate::sendPaintEvent(QRegion const&) + 37
-
 38      0x7f6ea0446149 QCoreApplication::notifyInternal2(QObject*, QEvent*) + 377
-
 37      0x7f6ea1e9a3e0 QApplication::notify(QObject*, QEvent*) + 512
-
 36      0x7f6ea1e93461 QApplicationPrivate::notify_helper(QObject*, QEvent*) + 129
-
 35      0x7f6ea1ed0138 QWidget::event(QEvent*) + 456
-
 34      0x7f6ea1eefafd /opt/nfri/lib/qt/5.12.0/GNU/8.3/lib/libQt5Widgets.so.5(+0x1c9afd) [0x7f6ea1eefafd]
-
 33      0x7f6e9fd241d6 QVTKOpenGLNativeWidget::paintGL() + 38
-
 32      0x7f6e9fd28a36 /opt/nfri/lib/paraview/5.8.1/GNU/8.3/lib64/libvtkGUISupportQt-pv5.9.so.1(+0x34a36) [0x7f6e9fd28a36]
-
 31      0x7f6e9a86cd42 /opt/nfri/lib/paraview/5.8.1/GNU/8.3/lib64/libvtkCommonCore-pv5.9.so.1(+0x2eed42) [0x7f6e9a86cd42]
-
 30      0x7f6e967f0530 vtkSMViewProxyInteractorHelper::Execute(vtkObject*, unsigned long, void*) + 240
-
 29      0x7f6e967f03fe vtkSMViewProxyInteractorHelper::Render() + 350
-
 28      0x7f6e967ecbd3 vtkSMViewProxy::StillRender() + 307
-
 27      0x7f6e9f74bff5 vtkPVSessionBase::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) + 53
-
 26      0x7f6e9f74cf0b vtkPVSessionCore::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) + 59
-
 25      0x7f6e9f74d0d2 vtkPVSessionCore::ExecuteStreamInternal(vtkClientServerStream const&, bool) + 242
-
 24      0x7f6e9d8a860d vtkClientServerInterpreter::ProcessStream(vtkClientServerStream const&) + 29
-
 23      0x7f6e9d8a854e vtkClientServerInterpreter::ProcessOneMessage(vtkClientServerStream const&, int) + 1054
-
 22      0x7f6e9d8a80dd vtkClientServerInterpreter::ProcessCommandInvoke(vtkClientServerStream const&, int) + 1101
-
 21      0x7f6e9d8a7b29 vtkClientServerInterpreter::CallCommandFunction(char const*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&) + 473
-
 20      0x7f6e97766308 vtkPVRenderViewCommand(vtkClientServerInterpreter*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&, void*) + 7864
-
 19      0x7f6e96758af1 vtkPVRenderView::StillRender() + 97
-
 18      0x7f6e96763356 vtkPVRenderView::Render(bool, bool) + 2134
-
 17      0x7f6e9e72a2e1 vtkGenericOpenGLRenderWindow::Render() + 273
-
 16      0x7f6e9e7ae3c8 vtkOpenGLRenderWindow::Render() + 168
-
 15      0x7f6e9d37b510 vtkRenderWindow::Render() + 448
-
 14      0x7f6e9d37b995 vtkRenderWindow::DoStereoRender() + 229
-
 13      0x7f6e9d38ca57 vtkRendererCollection::Render() + 151
-
 12      0x7f6e9d387355 vtkRenderer::Render() + 2517
-
 11      0x7f6e9e7b2493 vtkOpenGLRenderer::DeviceRender() + 643
-
 10      0x7f6e9e7b0fdd vtkOpenGLRenderer::UpdateGeometry(vtkFrameBufferObjectBase*) + 2973
-
 9       0x7f6e9e7b46da vtkOpenGLRenderer::DeviceRenderOpaqueGeometry(vtkFrameBufferObjectBase*) + 634
-
 8       0x7f6e9d38517b vtkRenderer::DeviceRenderOpaqueGeometry(vtkFrameBufferObjectBase*) + 75
-
 7       0x7f6e9670c157 vtkPVAxesActor::RenderOpaqueGeometry(vtkViewport*) + 183
-
 6       0x7f6e9d2d3a6f vtkActor::RenderOpaqueGeometry(vtkViewport*) + 703
-
 5       0x7f6e9e72de3a vtkOpenGLActor::Render(vtkRenderer*, vtkMapper*) + 154
-
 4       0x7f6e9d36b252 vtkPolyDataMapper::Render(vtkRenderer*, vtkActor*) + 290
-
 3       0x7f6e9e7946cf vtkOpenGLPolyDataMapper::RenderPiece(vtkRenderer*, vtkActor*) + 367
-
 2       0x7f6e9e78143c vtkOpenGLPolyDataMapper::RenderPieceDraw(vtkRenderer*, vtkActor*) + 508
-
 1       0x7f6e9e790300 vtkOpenGLPolyDataMapper::UpdateShaders(vtkOpenGLHelper&, vtkRenderer*, vtkActor*) + 1072
-
 0       0x7f6ea2a5a1e0 /lib64/libc.so.6(+0x361e0) [0x7f6ea2a5a1e0]
-
 (   3.003s) [paraview        ]                       :0     FATL| Signal: SIGSEGV
-
 Segmentation fault (core dumped)
 
- 
-
- 
-
-Oh-Kook Kwon  AA Team Leader at KMA | HP enterprise
-
-NCMS (National Center for Meteorological Supercomputer)
-
-Office +82-43-711-0427 | Mobile +82-10-2147-0003
-
-ohkooki@hpe.com  www.hpe.com
