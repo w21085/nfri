@@ -1,5 +1,13 @@
 WARNING: Application calling GLX 1.3 function "glXCreatePbuffer" when GLX 1.3 is not supported!  This is an application bug!
-(   2.981s) [paraview        ]vtkOpenGLRenderWindow.c:471    ERR| vtkGenericOpenGLRenderWindow (0x3631390): Unable to find a valid OpenGL 3.2 or later implementation. Please update your video card driver to the latest version. If you are using Mesa please make sure you have version 11.2 or later and make sure your driver in Mesa supports OpenGL 3.2 such as llvmpipe or openswr. If you are on windows and using Microsoft remote desktop note that it only supports OpenGL 3.2 with nvidia quadro cards. You can use other remoting software such as nomachine to avoid this issue.
+(   2.981s) [paraview        ]vtkOpenGLRenderWindow.c:471    ERR| vtkGenericOpenGLRenderWindow (0x3631390): 
+
+              Unable to find a valid OpenGL 3.2 or later implementation. 
+              Please update your video card driver to the latest version. 
+              If you are using Mesa please make sure you have version 11.2 or later 
+              and make sure your driver in Mesa supports OpenGL 3.2 such as llvmpipe or openswr. 
+              If you are on windows and using Microsoft remote desktop note that it only supports OpenGL 3.2 with nvidia quadro cards. 
+              You can use other remoting software such as nomachine to avoid this issue.
+              
 (   2.984s) [paraview        ]vtkOpenGLRenderWindow.c:471    ERR| vtkGenericOpenGLRenderWindow (0x3631390): Unable to find a valid OpenGL 3.2 or later implementation. Please update your video card driver to the latest version. If you are using Mesa please make sure you have version 11.2 or later and make sure your driver in Mesa supports OpenGL 3.2 such as llvmpipe or openswr. If you are on windows and using Microsoft remote desktop note that it only supports OpenGL 3.2 with nvidia quadro cards. You can use other remoting software such as nomachine to avoid this issue.
 (   3.003s) [paraview        ]   vtkShaderProgram.cxx:437    ERR| vtkShaderProgram (0x4af7ce0): 1: #version 150
 
